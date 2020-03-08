@@ -1,0 +1,15 @@
+.wrapper {
+  max-width: 600px; }
+  .wrapper .post-content {
+    font-family: "Open Sans", sans-serif; }
+    .wrapper .post-content h1 {
+      font-family: "Libre Baskerville", serif; }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
