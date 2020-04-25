@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{TITLE}}</title>
+    <meta name="description" content="{{DESCRIPTION}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
+    <link rel="stylesheet" href="/static/css/main.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <div class="wrapper">
+      {{HEADER}} {{POSTS}} {{FOOTER}}
+    </div>
+    <script src="/static/js/main.js"></script>
+
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </body>
+</html>

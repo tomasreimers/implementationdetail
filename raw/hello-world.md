@@ -1,5 +1,6 @@
 ---
-title = "New Website"
+title: "New Website"
+description: "Lorem Ipsum..."
 ---
 
 # Lorem Ipsum
