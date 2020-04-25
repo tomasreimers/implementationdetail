@@ -2,8 +2,11 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8" />
-    <title></title>
-    <meta name="description" content="" />
+    <title>Implementation Detail</title>
+    <meta
+      name="description"
+      content="Thoughts on Startups, Engineering, and Organizations."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="apple-touch-icon" href="icon.png" />
@@ -28,28 +31,50 @@
     <![endif]-->
 
     <div class="wrapper">
-       <div>
-  <div>
-    New Website
-  </div>
-  <div>
-    Lorem Ipsum...
-  </div>
+      <div class="header">
+  <a href="/" class="header-brand">
+    Impl. Detail
+  </a>
 </div>
- 
+
+      <div class="site-about">
+        Some thoughts on startups, engineering, and organizations. Authored by
+        <a href="https://tomasreimers.com" target="_blank">Tomas Reimers</a>.
+      </div>
+      <div class="posts">
+        <a href="/posts/thoughts-and-drafting" class="post-link">
+  <div class="post-link-title">
+    Thoughts and Drafting
+  </div>
+  <div class="post-link-byline">
+    
+  </div>
+  <div class="post-link-description">
+    In 9th grade I used to talk. A lot.
+  </div>
+</a>
+
+      </div>
+      <div class="footer">
+  &copy; Tomas Reimers, 2020
+</div>
+
     </div>
     <script src="/static/js/main.js"></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-98117292-4"
+    ></script>
     <script>
-      window.ga = function () {
-        ga.q.push(arguments);
-      };
-      ga.q = [];
-      ga.l = +new Date();
-      ga("create", "UA-XXXXX-Y", "auto");
-      ga("set", "transport", "beacon");
-      ga("send", "pageview");
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-98117292-4");
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
   </body>
 </html>
