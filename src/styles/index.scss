@@ -1,12 +1,120 @@
-.wrapper {
-  max-width: 600px;
+$footer-height: 40px;
+$footer-spacing: 20px;
 
-  .post-content {
-    h1 {
-      font-family: "Libre Baskerville", serif;
+html,
+body {
+  height: 100%;
+  font-family: "Libre Baskerville", serif;
+}
+
+.wrapper {
+  max-width: 512px;
+  margin: 0 auto;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding-bottom: $footer-height + $footer-spacing;
+  position: relative;
+
+  .header {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-brand {
+      border-bottom: 4px solid #f7493e;
+      color: inherit;
+      text-decoration: none;
     }
 
-    font-family: "Open Sans", sans-serif;
+    .header-about {
+      color: #dddddd;
+      text-align: right;
+      font-size: 12px;
+    }
+  }
+
+  .site-about {
+    margin: 20px 0 40px;
+    border-left: 2px solid #000000;
+    padding: 10px 0 10px 20px;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 2px solid #ffdb65;
+
+      &:hover {
+        background-color: #ffffd4;
+      }
+
+      &:active {
+        background-color: #ffdb65;
+      }
+    }
+  }
+
+  .posts {
+    margin-top: 20px;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 10px;
+    height: $footer-height;
+    border-top: 1px solid #eee;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .post-content {
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 2px solid #ffdb65;
+
+      &:hover {
+        background-color: #ffffd4;
+      }
+
+      &:active {
+        background-color: #ffdb65;
+      }
+    }
+
+    blockquote {
+      font-style: italic;
+    }
+
+    hr {
+      &::before {
+        content: "* * *";
+      }
+
+      height: auto;
+      border: 0;
+      text-align: center;
+    }
+
+    line-height: 24px;
+  }
+
+  .post-link {
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 40px;
+    display: block;
+
+    .post-link-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .post-link-description {
+    }
   }
 }
 

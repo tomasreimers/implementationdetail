@@ -96,7 +96,8 @@ fs.promises
             return fs.promises
               .readFile(path.join(RAW_PATH, file), "utf8")
               .then(function (contents: string) {
-                const newFileName = file.slice(0, -3) + ".html";
+                const slug = file.slice(0, -3);
+                const newFileName = slug + ".html";
 
                 return remark()
                   .use(guide)
@@ -132,6 +133,7 @@ fs.promises
                           });
                       });
                     return {
+                      slug: slug,
                       title: castVFile.data.frontmatter.title,
                       description: castVFile.data.frontmatter.description || "",
                     };
@@ -159,6 +161,7 @@ fs.promises
                       POSTS: posts
                         .map((post) => {
                           return interpolateTemplate(postLinkContent, {
+                            SLUG: post.slug,
                             TITLE: post.title,
                             DESCRIPTION: post.description,
                           });
