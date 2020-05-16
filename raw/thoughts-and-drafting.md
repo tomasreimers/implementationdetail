@@ -1,9 +1,8 @@
 ---
 title: "Thoughts and Drafting"
 description: "In 9th grade I used to talk. A lot."
+written: "2016-02-26T00:00:00+00:00"
 ---
-
-# Thoughts and Drafting
 
 _(Originally published on my [Medium](https://medium.com/@tomasreimers/thoughts-and-drafting-4983ff7572fb).)_
 

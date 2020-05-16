@@ -5,6 +5,7 @@ import { VFile } from "vfile";
 import sass from "node-sass";
 import { Node } from "unist";
 import { Result as SASSResult } from "node-sass";
+import moment from "moment";
 const guide = require("remark-preset-lint-markdown-style-guide");
 const html = require("remark-html");
 const frontmatter = require("remark-frontmatter");
@@ -67,6 +68,7 @@ interface BlogFile extends VFile {
     frontmatter: {
       title: string;
       description?: string;
+      written: string;
     };
   };
 }
@@ -108,6 +110,9 @@ fs.promises
                   .process(contents)
                   .then(function (vfile: VFile) {
                     const castVFile = vfile as BlogFile;
+
+                    const written = moment(castVFile.data.frontmatter.written);
+
                     fs.promises
                       .mkdir(POSTS_PATH, {
                         recursive: true,
@@ -120,6 +125,7 @@ fs.promises
                               HEADER: headerContent,
                               FOOTER: footerContent,
                               TITLE: castVFile.data.frontmatter.title,
+                              WRITTEN: written.format("MMM YYYY"),
                               DESCRIPTION:
                                 castVFile.data.frontmatter.description || "",
                               CONTENT: castVFile.toString(),
@@ -135,6 +141,7 @@ fs.promises
                     return {
                       slug: slug,
                       title: castVFile.data.frontmatter.title,
+                      written: written,
                       description: castVFile.data.frontmatter.description || "",
                     };
                   });
@@ -159,10 +166,14 @@ fs.promises
                       HEADER: headerContent,
                       FOOTER: footerContent,
                       POSTS: posts
+                        .sort((a, b) => {
+                          return b.written.valueOf() - a.written.valueOf();
+                        })
                         .map((post) => {
                           return interpolateTemplate(postLinkContent, {
                             SLUG: post.slug,
                             TITLE: post.title,
+                            WRITTEN: post.written.format("MMM YYYY"),
                             DESCRIPTION: post.description,
                           });
                         })

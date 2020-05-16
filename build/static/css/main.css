@@ -8,7 +8,7 @@ body {
   margin: 0 auto;
   min-height: 100%;
   box-sizing: border-box;
-  padding-bottom: 60px;
+  padding-bottom: 64px;
   position: relative; }
   .wrapper .header {
     padding: 16px 0;
@@ -25,9 +25,9 @@ body {
       text-align: right;
       font-size: 12px; }
   .wrapper .site-about {
-    margin: 20px 0 40px;
+    margin: 16px 0 40px;
     border-left: 2px solid #000000;
-    padding: 10px 0 10px 20px; }
+    padding: 16px 0 16px 24px; }
     .wrapper .site-about a {
       color: inherit;
       text-decoration: none;
@@ -37,7 +37,7 @@ body {
       .wrapper .site-about a:active {
         background-color: #ffdb65; }
   .wrapper .posts {
-    margin-top: 20px; }
+    margin-top: 24px; }
   .wrapper .footer {
     position: absolute;
     bottom: 0;
@@ -50,6 +50,8 @@ body {
     font-size: 12px; }
   .wrapper .post-content {
     line-height: 24px; }
+    .wrapper .post-content h1 {
+      line-height: 1.2em; }
     .wrapper .post-content a {
       color: inherit;
       text-decoration: none;
@@ -70,9 +72,16 @@ body {
     text-decoration: none;
     color: inherit;
     margin-bottom: 40px;
-    display: block; }
+    display: block;
+    padding: 16px; }
+    .wrapper .post-link:hover {
+      background-color: #ffffd4; }
     .wrapper .post-link .post-link-title {
       font-size: 20px;
+      font-weight: bold; }
+    .wrapper .post-link .post-link-byline {
+      font-size: 12px;
+      margin: 4px 0 8px;
       font-weight: bold; }
 
 /* ==========================================================================

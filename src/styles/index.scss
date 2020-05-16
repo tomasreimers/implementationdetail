@@ -1,5 +1,5 @@
 $footer-height: 40px;
-$footer-spacing: 20px;
+$footer-spacing: 24px;
 
 html,
 body {
@@ -36,9 +36,9 @@ body {
   }
 
   .site-about {
-    margin: 20px 0 40px;
+    margin: 16px 0 40px;
     border-left: 2px solid #000000;
-    padding: 10px 0 10px 20px;
+    padding: 16px 0 16px 24px;
 
     a {
       color: inherit;
@@ -56,7 +56,7 @@ body {
   }
 
   .posts {
-    margin-top: 20px;
+    margin-top: 24px;
   }
 
   .footer {
@@ -72,6 +72,10 @@ body {
   }
 
   .post-content {
+    h1 {
+      line-height: 1.2em;
+    }
+
     a {
       color: inherit;
       text-decoration: none;
@@ -108,12 +112,23 @@ body {
     color: inherit;
     margin-bottom: 40px;
     display: block;
+    padding: 16px;
+
+    &:hover {
+      background-color: #ffffd4;
+    }
 
     .post-link-title {
       font-size: 20px;
       font-weight: bold;
     }
     .post-link-description {
+    }
+
+    .post-link-byline {
+      font-size: 12px;
+      margin: 4px 0 8px;
+      font-weight: bold;
     }
   }
 }
