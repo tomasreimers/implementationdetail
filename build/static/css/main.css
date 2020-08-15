@@ -110,10 +110,8 @@ body {
     .container .post-link .post-link-title {
       font-size: 20px;
       font-weight: 600; }
-    .container .post-link .post-link-byline {
-      font-size: 12px;
-      margin: 4px 0 8px;
-      font-weight: bold; }
+    .container .post-link .post-link-description {
+      font-size: 20px; }
 
 /* ==========================================================================
    Browser Upgrade Prompt
