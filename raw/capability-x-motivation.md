@@ -1,6 +1,7 @@
 ---
 title: "Capability, Motivation, and Awareness"
 description: "A framework for people growth."
+written: "2020-08-15T00:00:00+00:00"
 ---
 
 Working with somebody is probably the first time you'll care about their **output**. As a friend, or even a professional relationship but on a different team, this likely didn't matter to you; however, once your job depends on their output, you'll probably find yourself, either intentionally or unintenionally, evaluating how productive they are--that is the rate at which you can depend on them to produce meaningful output.
