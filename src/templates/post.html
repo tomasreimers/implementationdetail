@@ -27,13 +27,21 @@
       </p>
     <![endif]-->
 
-    <div class="wrapper">
-      {{HEADER}}
-      <div class="post-content">
-        <h1>{{TITLE}}</h1>
-        {{CONTENT}}
+    <div class="wrapper-with-footer">
+      <div class="top">
+        <div class="container title">
+          <a class="subtitle" href="/">
+            Implementation Detail
+          </a>
+          {{TITLE}}
+        </div>
       </div>
-      {{FOOTER}}
+      <div class="container">
+        <div class="post-content">
+          {{CONTENT}}
+        </div>
+        {{FOOTER}}
+      </div>
     </div>
     <script src="/static/js/main.js"></script>
 
