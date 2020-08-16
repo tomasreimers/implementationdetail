@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>The Developer Framework Lifecycle</title>
+    <meta name="description" content="Methods of acceleration and control." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
+    <link rel="stylesheet" href="/static/css/main.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <div class="wrapper-with-footer">
+      <div class="top">
+        <div class="container title">
+          <a class="subtitle" href="/">
+            Implementation Detail &bull; Aug 2020
+          </a>
+          The Developer Framework Lifecycle
+        </div>
+      </div>
+      <div class="container">
+        <div class="post-content">
+          <p>I started my career by working on developer frameworks, specifically infrastructure to better facilitate product development. I was fortunate enough to have the opportunity to extend the framework and enable a new class of functionality. Because the functionality I was enabling was highly sought after, I had a lot of interested individuals happy to mentor and make sure the project went well. (I cannot overstate how grateful I was to have the opportunity to lead that project early on.)</p>
+<p>It was in one of those meetings, discussing how to best design the APIs we would be exposing to developers, when I got one of the better pieces of advice regarding framework design:</p>
+<blockquote>
+<p>Developer frameworks start as methods of acceleration and end as methods of control</p>
+</blockquote>
+<h2>Acceleration</h2>
+<p>The reason why developers will adopt your framework ultimately reduces to some variant of "it will accelerate them": it's possible it accelerates them through:</p>
+<ul>
+<li>Structuring their thinking (e.g. React);</li>
+<li>Abstracting a platform (e.g. Firebase); or</li>
+<li>Handling and abstracting away complexity (e.g. Tensorflow)</li>
+</ul>
+<p>The reason why accelerating developers is so important is because fundamentally it is one of the only value props you <em>can</em> provide. In the case of things like React and Tensorflow, developers are fundamentally able to build what you are providing them, and so their incentive is to only adopt your thing if it somehow accelerates them (putting off learning, handing off building, or offloading maintence).</p>
+<p><em>Note: There is a notable exception around frameworks you are mandated to use in order to develop for a platform, e.g. the iOS APIs / Hardware SDKs. Those don't need to provide value beyond allowing you to develop for a new platform.</em></p>
+<h2>Control</h2>
+<p>As a framework gains in popularity, it will enter the second phase of it's lifecycle, "Control".</p>
+<p>The framework authors got many different teams to conform to their various codebases and programming styles to conform to a common set of APIs. The more people using the framework, the more leverage there is in changing the implementation (as you're now suddenly affecting N codepaths at once). This leverage point becomes the best place where organizations and individuals can exert influence to change developer behavior and gate what is and isn't possible.</p>
+<blockquote>
+<p>“We shape our tools and, thereafter, our tools shape us.” — John Culkin</p>
+</blockquote>
+<p>While "control" has a bad connotation, it doesn't have to be malicious. Examples of "good control" are UI frameworks / design systems which force the resulting UIs to be accessible, or ML frameworks which force the models to be serializable.</p>
+<h2>Platformitization</h2>
+<p>As a framework starts to push the author's opinions on the users, the framework maintains control through platformitization. Because of its "market share" and the relative leverage, new frameworks and tooling are built on top of it. This causes more and more teams to adopt your framework and raises the barrier to leave to existing developers. Said another way, developer frameworks experience an inherent network effect.</p>
+<p>As an organization, you want to be thoughtful about which frameworks you build, adopt, and open source because they will end up and allow you to influence the direction of development. And in open source: <strong>if you don't build it, somebody else will</strong>.</p>
+
+        </div>
+        <div class="footer">
+  <div class="container">
+    <div class="footer-container">
+      Authored by <a href="https://tomasreimers.com">Tomas Reimers</a>, &copy;
+      2020
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-98117292-4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-98117292-4");
+    </script>
+  </body>
+</html>
