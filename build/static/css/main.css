@@ -103,8 +103,8 @@ body {
     margin-bottom: 20px;
     display: block;
     padding: 16px;
-    margin-left: -16px;
-    margin-right: -16px; }
+    margin-right: -16px;
+    border-left: 4px solid #ffdb65; }
     .container .post-link:hover {
       background-color: #ffffd4; }
     .container .post-link .post-link-title {
@@ -112,6 +112,9 @@ body {
       font-weight: 600; }
     .container .post-link .post-link-description {
       font-size: 20px; }
+    .container .post-link .post-link-date {
+      margin-bottom: 4px;
+      font-size: 12px; }
 
 /* ==========================================================================
    Browser Upgrade Prompt

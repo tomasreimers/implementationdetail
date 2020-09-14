@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>[WIP] In Defense of Not Built Here</title>
+    <meta name="description" content="On technology, dependencies, and responsibility." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
+    <link rel="stylesheet" href="/static/css/main.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <div class="wrapper-with-footer">
+      <div class="top">
+        <div class="container title">
+          <a class="subtitle" href="/">
+            Implementation Detail &bull; Sep 2020
+          </a>
+          [WIP] In Defense of Not Built Here
+        </div>
+      </div>
+      <div class="container">
+        <div class="post-content">
+          <p>One of the ideas that I think is unduely written off is <a href="https://en.wikipedia.org/wiki/Not_invented_here">Not Built Here Syndrome</a>. Coming from Facebook, which is arguably one of the most entrentched in the ideology, to my own startup, I found myself having to form and defend my own opinions on the matter. This post is a writeup of my thoughts; while I think that FB may be a little too polarized, I do think that not enough people give NBHS the credit it's due. There are a lot of advantages to owning everything.</p>
+<hr>
+<p>First and foremost, I'm of the opinion that this debate is becoming increasingly relevant because the level of code-reuse, and modularity, is changing. Libraries / Framewworks / SDKs used to be reserved for fairly heavy-weight peices of code with fully encapsulated dependencies. The web, and I believe specifically NPM, has changed that level of code-reuse. Now there is a library for everything--<a href="https://github.com/parro-it/awesome-micro-npm-packages">from checking if something is a number to adding padding to a string</a>--and it's become popularized <em>not</em> to write that utility function for the Nth time, <a href="https://github.com/sindresorhus/ama/issues/10">but instead to import the canonical one from NPM</a>.</p>
+<p><em>(There's probably an interesting historical examination to be written of how this came about; I suspect that this level of code-reuse was the logical evolution to the StackOverflow Copy/Paste that became so popular, speficically around web code).</em></p>
+<hr>
+<p>With the increased modularity and a package for everything, why would you ever write a utility function again? My understanding is that many JS devs are of the opinion you shouldn't. I also believe that this is a mentality driven by some of the most prolific OSS contributors, for whom it is successful because they are able to support the code they import.</p>
+<p>By support, I mean willing to update the code to suit their specific usecase. A package might be a bad fit for your usecase if it is:</p>
+<ul>
+<li>Too broad: e.g. a full utility library (think lodash or underscore) when you only need one method.</li>
+<li>Too narrow: e.g. a function which behaves close to what you want but just needs one more arg / config value</li>
+</ul>
+<p>In these cases, the prolific OSS contributor is able to appropriately monkey patch, fork, or extend the library (in the case it's too broad, they implement tree-shaking or code-splitting; in the case it's too narrow, they extend the package). In this way, importing a library has all the benefits of owning it yourself, with the added benefit of N-many other contributors improving various parts of your codebase (and, of course, <a href="https://blog.codinghorror.com/never-design-what-you-can-steal/">never write what you can steal</a>). Where I think this advice breaks down is when people choose to import libraries that they don't, and are unwilling to, understand or extend.</p>
+<p>For many people, updating an OSS library is scary, and for many projects you don't need or want the constant updates that come with a remote package OR your use-case is so specific that it's unlikely the changes you need would get merged upstream. In these cases, which I believe are more common than many people acknowledge, I believe you're better off writing or forking the package yourself.</p>
+<hr>
+<p>Said as is, I don't believe this is contentious; where it gets contentious is when you look at the boundary of various technologies. How many mobile developers use React Native without understanding how it works? And how many more web developers use Kubernetes without being able to extend it?</p>
+<p><strong>My belief is that you are responsible for any code you choose to introduce into the codebase</strong>. If you choose to import instead of write, that's fine, you just need to be willing to support it. That does not mean you need to read all the source for React Native before you use it; it does mean that it is your responsibility to do risk analysis and decide what maintence might come up and deciding whether you're willing to do that.</p>
+<p>Of course, one may argue that would slow them down - and we should focus on dev velocity. However, I think using a library you don't understand is effectively tech debt. Eventually (assuming you don't toss out the code) you will have to extend it; not being intentional about what debt you assume, may let you move faster in the short term and ultimately <a href="https://www.maxsegan.com/note/debt">slow you down in the long term</a>.</p>
+
+        </div>
+        <div class="footer">
+  <div class="container">
+    <div class="footer-container">
+      Authored by <a href="https://tomasreimers.com">Tomas Reimers</a>, &copy;
+      2020
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-98117292-4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-98117292-4");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "watch": ["src", "raw"],
+  "ext": "html,scss,md",
+  "exec": "yarn serve"
+}
