@@ -63,6 +63,24 @@ body {
       }
     }
   }
+
+  .index-subtitle {
+    font-size: 16px;
+    margin-top: 8px;
+    font-style: italic;
+    font-weight: medium;
+    box-sizing: border-box;
+
+    a {
+      &:link,
+      &:hover,
+      &:visited,
+      &:active {
+        text-decoration: underline;
+        color: inherit;
+      }
+    }
+  }
 }
 
 .container {
